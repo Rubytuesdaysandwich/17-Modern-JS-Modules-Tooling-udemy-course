@@ -78,6 +78,7 @@ console.log(shoppingCart2.shippingCost);
 //----- CommonJS Modules
 //NPM
 // export example
+/*
 export addToCart = function (product, quantity) {
     cart.push({ product, quantity });
     console.log(
@@ -86,4 +87,4 @@ export addToCart = function (product, quantity) {
   };//will not work in the browser but will work in node js
 //   import example
 //not defined in browser but it is defined in nodeJS
-// const{addToCart}=require('./shoppingCart.js');
+ const{addToCart}=require('./shoppingCart.js');*/
