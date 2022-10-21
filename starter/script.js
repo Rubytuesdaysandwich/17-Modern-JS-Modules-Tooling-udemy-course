@@ -5,7 +5,7 @@
 // addToCart('bread', 5);
 // console.log(Price, tq);
 // ▲▲▲▲▲▲
-console.log('importing module');
+// console.log('importing module');
 //console.log(shippingCost);
 // import * as shoppingCart from './shoppingCart.js'; //creates an object called shopping cart
 // shoppingCart.addToCart('bread', 5);
@@ -13,11 +13,13 @@ console.log('importing module');
 //---importing default---
 // import add, { addToCart, totalPrice as price, tq } from './shoppingCart.js';
 // console.log(price);
+/*
 import add, { cart } from './shoppingCart.js';
 add('pizza', 2);
 add('bread', 5);
 add('apples', 4);
 console.log(cart);
+*/
 /*
 // imports are not copies of exports they are a live connections
 // console.log('start fetching');
@@ -90,3 +92,6 @@ export addToCart = function (product, quantity) {
  const{addToCart}=require('./shoppingCart.js');*/
 
 //! tools in NPM only available in the command line
+
+//importing an API introduction to NPM
+import { cloneDeep } from './node_modules/lodash-es/cloneDeep.js';
