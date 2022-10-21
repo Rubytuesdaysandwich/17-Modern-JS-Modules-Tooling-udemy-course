@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Rubytuesdaysandwich/17-Modern-JS-Modules-Tooling-udemy-course#readme",
   "dependencies": {
-    "leaflet": "^1.9.2"
+    "leaflet": "^1.9.2",
+    "lodash-es": "^4.17.21"
   }
 }
