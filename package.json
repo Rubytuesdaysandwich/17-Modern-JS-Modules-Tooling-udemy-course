@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Rubytuesdaysandwich/17-Modern-JS-Modules-Tooling-udemy-course/issues"
   },
-  "homepage": "https://github.com/Rubytuesdaysandwich/17-Modern-JS-Modules-Tooling-udemy-course#readme"
+  "homepage": "https://github.com/Rubytuesdaysandwich/17-Modern-JS-Modules-Tooling-udemy-course#readme",
+  "dependencies": {
+    "leaflet": "^1.9.2"
+  }
 }
