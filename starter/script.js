@@ -76,7 +76,7 @@ console.log(shoppingCart2.shippingCost);
 // end module pattern
 */
 //----- CommonJS Modules
-//NPM
+//NPM NODE Package Manager
 // export example
 /*
 export addToCart = function (product, quantity) {
