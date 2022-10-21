@@ -88,3 +88,5 @@ export addToCart = function (product, quantity) {
 //   import example
 //not defined in browser but it is defined in nodeJS
  const{addToCart}=require('./shoppingCart.js');*/
+
+//! tools in NPM only available in the command line
