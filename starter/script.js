@@ -49,7 +49,7 @@ console.log(lastPost2);
 
 // --------The Module Pattern
 //ify function immediately invoked
-const shoppingCart2 = (function () {
+/*const shoppingCart2 = (function () {
   const cart = [];
   const shippingCost = 10;
   const totalPrice = 237;
@@ -74,3 +74,16 @@ shoppingCart2.addToCart('pizza', 2);
 console.log(shoppingCart2);
 console.log(shoppingCart2.shippingCost);
 // end module pattern
+*/
+//----- CommonJS Modules
+//NPM
+// export example
+export addToCart = function (product, quantity) {
+    cart.push({ product, quantity });
+    console.log(
+      `${quantity} ${product} added to cart(shipping cost is ${shippingCost})`
+    );
+  };//will not work in the browser but will work in node js
+//   import example
+//not defined in browser but it is defined in nodeJS
+// const{addToCart}=require('./shoppingCart.js');
