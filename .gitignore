@@ -1,1 +1,4 @@
 node_modules
+starter/package-lock.json
+package.json
+.prettierrc
