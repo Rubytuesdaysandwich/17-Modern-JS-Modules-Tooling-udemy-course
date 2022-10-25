@@ -94,7 +94,9 @@ export addToCart = function (product, quantity) {
 //! tools in NPM only available in the command line
 
 //importing an API introduction to NPM
-import cloneDeep from '../node_modules/lodash-es/cloneDeep.js';
+//for reference // import cloneDeep from '../node_modules/lodash-es/cloneDeep.js';
+//parcel can download packages as well
+import cloneDeep from 'lodash-es';
 
 const state = {
   cart: [
@@ -108,3 +110,7 @@ const stateDeepClone = cloneDeep(state);
 
 state.user.loggedIn = false;
 console.log(stateClone);
+
+if (module.hot) {
+  module.hot.accept();
+}

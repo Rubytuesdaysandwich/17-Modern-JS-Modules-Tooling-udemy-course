@@ -1,0 +1,27 @@
+{
+  "name": "17-modern-js-modules-tooling",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rubytuesdaysandwich/17-Modern-JS-Modules-Tooling-udemy-course.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rubytuesdaysandwich/17-Modern-JS-Modules-Tooling-udemy-course/issues"
+  },
+  "homepage": "https://github.com/Rubytuesdaysandwich/17-Modern-JS-Modules-Tooling-udemy-course#readme",
+  "dependencies": {
+    "leaflet": "^1.9.2",
+    "lodash-es": "^4.17.21"
+  },
+  "devDependencies": {
+    "parcel": "^2.7.0"
+  }
+}

@@ -1,0 +1,8 @@
+7
+111C:\Dev\advanced_javascript\15,16,17 udemy-course_Rueben-durfee\17-Modern-JS-Modules-Tooling\starter\.prettierrc132886955210000000 0
+108C:\Dev\advanced_javascript\15,16,17 udemy-course_Rueben-durfee\17-Modern-JS-Modules-Tooling\starter\clean.js132886955210000000 0
+115C:\Dev\advanced_javascript\15,16,17 udemy-course_Rueben-durfee\17-Modern-JS-Modules-Tooling\starter\shoppingCart.js133108592109589001 0
+110C:\Dev\advanced_javascript\15,16,17 udemy-course_Rueben-durfee\17-Modern-JS-Modules-Tooling\starter\index.html133108610118676563 0
+109C:\Dev\advanced_javascript\15,16,17 udemy-course_Rueben-durfee\17-Modern-JS-Modules-Tooling\starter\script.js133108608023601513 0
+112C:\Dev\advanced_javascript\15,16,17 udemy-course_Rueben-durfee\17-Modern-JS-Modules-Tooling\starter\package.json133108624172728706 0
+117C:\Dev\advanced_javascript\15,16,17 udemy-course_Rueben-durfee\17-Modern-JS-Modules-Tooling\starter\package-lock.json133108593568726983 0
