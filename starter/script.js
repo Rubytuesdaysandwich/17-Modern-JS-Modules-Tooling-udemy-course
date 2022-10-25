@@ -114,3 +114,16 @@ console.log(stateClone);
 if (module.hot) {
   module.hot.accept();
 }
+
+class person {
+  greeting = ' Hey';
+  constructor(name) {
+    this.name = name;
+    console.log(`${this.greeting},${this.name}`);
+  }
+}
+const jonas = new person('Jonas');
+//babel can convert js versions for different users so users who do not have a updated browser can access your websites
+//some item can be transpile some cannot
+console.log('Jonas' ?? null);
+console.log(cart.find(el => el.quantity >= 2));
