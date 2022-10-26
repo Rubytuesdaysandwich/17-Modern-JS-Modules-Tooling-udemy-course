@@ -70,7 +70,7 @@ const newBudget3 = addExpense(newBudget2, spendingLimits, 200, 'Stuff', 'Jay');
 console.log(newBudget1);
 console.log(newBudget2);
 
-//check the entry for it exceeds the budget
+//check the entry for if it exceeds the budget
 const checkExpenses = function (state, limits) {
   return state.map(entry => {
     return entry.value < -getLimit(limits, entry.user)
