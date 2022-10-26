@@ -26,7 +26,7 @@ spendingLimits.jay = 200;
 // const limit = spendingLimits[user] ? spendingLimits[user] : 0;
 //optional chaining
 // const limit = spendingLimits?.[user] ?? 0;
-const getLimit = user => spendingLimits?.[user] ?? 0;
+const getLimit = user => spendingLimits?.[(limits, user)] ?? 0;
 // addExpense function is trying to mutate the outside object as a side effect
 //pure function
 const addExpense = function (
@@ -45,7 +45,7 @@ const addExpense = function (
   ////   lim = 0;
   //// }
 
-  const limit = getLimit(cleanUser);
+  const limit = getLimit(limits, cleanUser);
   //if the value is  greater than the limit it will not run
   //if value less than limit it gets pushed to the budget array
   //enhanced object literal syntax
@@ -58,12 +58,26 @@ const addExpense = function (
 //because the budget object is not being mutated we must store it somewhere
 const newBudget1 = addExpense(budget, spendingLimits, 10, 'Pizza 🍕');
 // const newBudget1 = addExpense(budget, spendingLimits, 10000, 'Pizza 🍕');
+const newBudget2 = addExpense(
+  newBudget1,
+  spendingLimits,
+  100,
+  'Going to movies 🍿',
+  'Matilda'
+);
+//jay is not allow to add anything so nothing will be added
+const newBudget3 = addExpense(newBudget2, spendingLimits, 200, 'Stuff', 'Jay');
 console.log(newBudget1);
-addExpense(budget, spendingLimits, 100, 'Going to movies 🍿', 'Matilda');
-addExpense(budget, spendingLimits, 200, 'Stuff', 'Jay');
+console.log(newBudget2);
 
 //check the entry for it exceeds the budget
-const checkExpenses = function () {
+const checkExpenses = function (state, limits) {
+  return state.map(entry => {
+    return entry.value < -getLimit(limits, entry.user)
+      ? { ...entry, flag: 'limit' }
+      : entry;
+  });
+
   //// let lim;
   //// if (spendingLimits[entry.user]) {
   ////   lim = spendingLimits[entry.user];
@@ -76,6 +90,8 @@ const checkExpenses = function () {
     if (entry.value < -getLimit(entry.user)) {
       entry.flag = 'limit';
     }
+  checkExpenses(newBudget3, spendingLimits);
+  console.log(newBudget3);
 };
 
 checkExpenses();
