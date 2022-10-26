@@ -28,6 +28,7 @@ spendingLimits.jay = 200;
 // const limit = spendingLimits?.[user] ?? 0;
 const getLimit = user => spendingLimits?.[user] ?? 0;
 // addExpense function is trying to mutate the outside object as a side effect
+//pure function
 const addExpense = function (
   state,
   limits,
@@ -45,16 +46,19 @@ const addExpense = function (
   //// }
 
   const limit = getLimit(cleanUser);
-
-  if (value <= getLimit(cleanUser)) {
-    //if value less than limit it gets pushed to the budget array
-    //enhanced object literal syntax
-    return [...state, { value: -value, description, user: cleanUser }];
-    // budget.push({ value: -value, description, user: cleanUser });
-  }
+  //if the value is  greater than the limit it will not run
+  //if value less than limit it gets pushed to the budget array
+  //enhanced object literal syntax
+  return value <= getLimit(cleanUser)
+    ? [...state, { value: -value, description, user: cleanUser }]
+    : state; //now the budget object will not be mutated
+  // budget.push({ value: -value, description, user: cleanUser });
 };
 
-addExpense(budget, spendingLimits, 10, 'Pizza 🍕');
+//because the budget object is not being mutated we must store it somewhere
+const newBudget1 = addExpense(budget, spendingLimits, 10, 'Pizza 🍕');
+// const newBudget1 = addExpense(budget, spendingLimits, 10000, 'Pizza 🍕');
+console.log(newBudget1);
 addExpense(budget, spendingLimits, 100, 'Going to movies 🍿', 'Matilda');
 addExpense(budget, spendingLimits, 200, 'Stuff', 'Jay');
 
