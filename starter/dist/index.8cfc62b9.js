@@ -621,7 +621,7 @@ export addToCart = function (product, quantity) {
 var _lodashEs = require("lodash-es");
 var _lodashEsDefault = parcelHelpers.interopDefault(_lodashEs);
 var _find = require("core-js/stable/array//find");
-//polifilling async functions
+//poly filling async functions used to change code based on version of browser
 var _runtime = require("regenerator-runtime/runtime");
 console.log("importing module");
 (0, _shoppingCartJsDefault.default)("pizza", 2);

@@ -133,5 +133,5 @@ import 'core-js/stable';
 import 'core-js/stable/array//find';
 import 'core-js/stable/promise';
 
-//polifilling async functions
+//poly filling async functions used to change code based on version of browser
 import 'regenerator-runtime/runtime';
