@@ -73,3 +73,5 @@ const logBigExpenses = function (bigLimit) {
 };
 console.log(budget);
 logBigExpenses(500);
+
+//cleaning up code with map filter and reduce
