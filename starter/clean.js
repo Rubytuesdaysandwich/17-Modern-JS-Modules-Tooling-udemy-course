@@ -136,3 +136,5 @@ logBigExpenses(finalBudget, 500);
 
 //cleaning up code with map filter and reduce
 //in functional programming try to reduce the amount of side effects or things being output to try and reduce clutter and keep things cleaner
+
+//!section 17 completed!
