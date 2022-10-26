@@ -114,7 +114,8 @@ console.log(stateClone);
 if (module.hot) {
   module.hot.accept();
 }
-
+//!=========
+// -----Configuring Babel and Polyfilling
 class person {
   greeting = ' Hey';
   constructor(name) {
@@ -127,3 +128,10 @@ const jonas = new person('Jonas');
 //some item can be transpile some cannot
 console.log('Jonas' ?? null);
 console.log(cart.find(el => el.quantity >= 2));
+//--------recipe------
+import 'core-js/stable';
+import 'core-js/stable/array//find';
+import 'core-js/stable/promise';
+
+//polifilling async functions
+import 'regenerator-runtime/runtime';
