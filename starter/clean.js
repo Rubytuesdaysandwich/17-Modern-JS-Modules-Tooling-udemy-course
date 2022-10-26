@@ -13,7 +13,8 @@ const spendingLimits = {
   jonas: 1500,
   matilda: 100,
 };
-
+//arrow function getting the limit
+const getLimit = user => spendingLimits?.[user] ?? 0;
 const addExpense = function (value, description, user = 'Jonas') {
   user = user.toLowerCase();
 
@@ -26,42 +27,49 @@ const addExpense = function (value, description, user = 'Jonas') {
   //ternary operator
   // const limit = spendingLimits[user] ? spendingLimits[user] : 0;
   //optional chaining
-  const limit = spendingLimits?.[user] ?? 0;
+  // const limit = spendingLimits?.[user] ?? 0;
+  const limit = getLimit(user);
 
-  if (value <= limit) {
+  if (value <= getLimit(user)) {
+    //if value less than limit it gets pushed to the budget array
+    //enhanced object literal syntax
     budget.push({ value: -value, description, user });
   }
 };
 addExpense(10, 'Pizza 🍕');
 addExpense(100, 'Going to movies 🍿', 'Matilda');
 addExpense(200, 'Stuff', 'Jay');
-console.log(budget);
 
-const check = function () {
-  for (const el of budget) {
-    let lim;
-    if (spendingLimits[el.user]) {
-      lim = spendingLimits[el.user];
-    } else {
-      lim = 0;
+//check the entry for it exceeds the budget
+const checkExpenses = function () {
+  //// let lim;
+  //// if (spendingLimits[entry.user]) {
+  ////   lim = spendingLimits[entry.user];
+  //// } else {
+  ////   lim = 0;
+  //// }
+  //optional chaining
+  //// const limit = spendingLimits?.[entry.user] ?? 0;
+  for (const entry of budget)
+    if (entry.value < -getLimit(entry.user)) {
+      entry.flag = 'limit';
     }
-
-    if (el.value < -lim) {
-      el.flag = 'limit';
-    }
-  }
 };
-check();
+
+checkExpenses();
 
 console.log(budget);
 
-const bigExpenses = function (limit) {
+const logBigExpenses = function (bigLimit) {
   let output = '';
-  for (const el of budget) {
-    if (el.value <= -limit) {
-      output += el.description.slice(-2) + ' / '; // Emojis are 2 chars
-    }
-  }
+  for (const entry of budget)
+    output +=
+      entry.value <= -bigLimit ? `${entry.description.slice(-2)} / ` : '';
+  //if (entry.value <= -limit) {
+  // output += `${entry.description.slice(-2)} + / `; // Emojis are 2 chars
+
   output = output.slice(0, -2); // Remove last '/ '
   console.log(output);
 };
+console.log(budget);
+logBigExpenses(500);
